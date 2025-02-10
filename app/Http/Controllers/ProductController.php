@@ -48,7 +48,8 @@ class ProductController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $products = Products::findorFail($id);
+        return view('products.view', compact('products'));
     }
 
     /**

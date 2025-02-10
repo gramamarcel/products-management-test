@@ -34,6 +34,8 @@
                         <td>
                             <a href="{{ route('products.edit', ['product' => $product->id]) }}"
                                 class="btn btn-warning btn-sm">Editeaza</a>
+                                <a href="{{ route('products.show', ['product' => $product->id]) }}"
+                                    class="btn btn-success btn-sm">Vizualizeaza</a>
                             <form action="{{ route('products.destroy', ['product' => $product->id]) }}" method="POST"
                                 style="display:inline;">
                                 @csrf
